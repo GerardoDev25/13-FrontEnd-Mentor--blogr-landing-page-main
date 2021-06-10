@@ -1,0 +1,32 @@
+/* ***************************************** */
+/* ? ***************** root ***************** */
+/* ***************************************** */
+:root {
+ }
+ 
+ *,
+ *::after,
+ *::before {
+    box-sizing: border-box;
+ }
+ 
+ /* ***************************************** */
+ /* ? ***************** body ***************** */
+ /* ***************************************** */
+ 
+ /* html,
+ body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 110vh;
+    min-height: 812px;
+    background-color: var(--violet);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+  */
