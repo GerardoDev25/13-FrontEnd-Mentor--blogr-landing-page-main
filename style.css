@@ -53,22 +53,264 @@
 /* ? ***************** body ***************** */
 /* ***************************************** */
 
-body{
-    background-color: #999;
+html,
+body {
+   height: 100%;
+   width: 100vw;
+   margin: 0;
+   padding: 0;
 }
-/* html,
- body {
-    overflow-x: hidden;
-    width: 100vw;
-    height: 110vh;
-    min-height: 812px;
-    background-color: var(--violet);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
- 
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
-  */
+
+/* ***************************************** */
+/* ? *************** header *************** */
+/* ***************************************** */
+
+header {
+   background: linear-gradient(
+      0deg,
+      var(--Light-red) 0%,
+      var(--Very-light-red) 100%
+   );
+   width: 100%;
+   border-bottom-left-radius: 7rem;
+}
+
+/* ***************************************** */
+/* ? *************** top *************** */
+
+.--header-top {
+   padding-top: 3rem;
+   padding-left: 1.5rem;
+   padding-right: 1.5rem;
+   display: flex;
+   justify-content: space-between;
+}
+
+/* ***************************************** */
+/* ? *************** navbar *************** */
+
+.NavBar {
+   display: none;
+}
+
+/* ***************************************** */
+/* ? *************** botton *************** */
+
+.--header-botton {
+   margin-top: 4rem;
+   padding: 1.6rem;
+   color: var(--White);
+   font-family: "Overpass", sans-serif;
+   text-align: center;
+}
+
+.header-texto p {
+   font-size: 1.2rem;
+   line-height: 1.7rem;
+   padding-bottom: 2.5rem;
+}
+.header-texto h1 {
+   line-height: 2.7rem;
+   font-size: 2.2rem;
+}
+
+.header-btn {
+   display: flex;
+   justify-content: space-around;
+   height: 3rem;
+   margin-bottom: 7rem;
+}
+.header-btn .btn {
+   width: 9rem;
+   border-radius: 3rem;
+   font-size: 1.1rem;
+   font-weight: 700;
+   border: none;
+   font-weight: 700;
+}
+
+.header-btn .start {
+   background-color: var(--White);
+   color: var(--Light-red);
+}
+.header-btn .learn {
+   background-color: transparent;
+   color: var(--White);
+   border: 2px solid var(--White);
+}
+
+/* ***************************************** */
+/* ? **************** main **************** */
+/* ***************************************** */
+
+main {
+   /* background-color: #aaa; */
+   text-align: center;
+   margin-top: 7rem;
+   width: 100%;
+   font-family: "Ubuntu", sans-serif;
+}
+
+main img {
+   max-width: 100%;
+}
+
+main section {
+   padding-left: 1.2rem;
+   padding-right: 1.2rem;
+   margin-bottom: 3rem;
+}
+
+.box {
+   outline: 2px dotted red;
+}
+
+/* ***************************************** */
+/* ? *************** box-1 *************** */
+
+.box-1 {
+   margin-bottom: 15rem;
+}
+
+.box-1 h2 {
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   color: var(--Very-dark-blue);
+}
+.box-1 h3 {
+   font-size: 1.8rem;
+   color: var(--Very-dark-blue);
+   line-height: 2.2rem;
+   font-weight: 500;
+}
+
+.box-1 .img1 {
+   margin-bottom: 2rem;
+}
+
+.box-1 p {
+   line-height: 1.7rem;
+   font-size: 1.1rem;
+   color: var(--Very-dark-grayish-blue);
+}
+
+/* ***************************************** */
+/* ? *************** box-2 *************** */
+
+.box-2 {
+   position: relative;
+   height: 40rem;
+   background-image: url("./images/bg-pattern-circles.svg"),
+      linear-gradient(
+         0deg,
+         var(--Very-dark-desaturated-blue) 0%,
+         var(--Very-dark-gray-blue) 100%
+      );
+
+   background-position-y: -50%, 0;
+   background-position-x: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   border-top-right-radius: 8rem;
+   border-bottom-left-radius: 8rem;
+}
+
+.box-2 .img2 {
+   position: absolute;
+   top: -25%;
+}
+
+.box-section-3 {
+   padding-top: 55%;
+   color: var(--White);
+}
+
+.box-section-3 h2 {
+   font-size: 2.2rem;
+   font-weight: 700;
+   line-height: 2.7rem;
+   font-family: "Overpass", sans-serif;
+}
+
+.box-section-3 p {
+   font-family: "Overpass", sans-serif;
+
+   font-size: 1.1rem;
+   line-height: 1.9rem;
+   font-weight: 400;
+   opacity: 0.9;
+}
+
+/* ***************************************** */
+/* ? *************** box-3 *************** */
+
+.box-3 {
+   padding-bottom: 3rem;
+}
+
+.box-3 .box-text h2 {
+   font-size: 1.7rem;
+   font-weight: 500;
+   color: var(--Very-dark-blue);
+}
+.box-3 .box-text p {
+   color: var(--Very-dark-grayish-blue);
+   font-size: 1.03rem;
+   line-height: 1.7rem;
+   opacity: 0.9;
+}
+
+/* ***************************************** */
+/* ? **************** footer **************** */
+/* ***************************************** */
+
+footer {
+   background-color: var(--Very-dark-black-blue);
+   height: 98vh;
+   border-top-right-radius: 8rem;
+   color: white;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   font-family: "Ubuntu", sans-serif;
+
+}
+
+footer > div {
+   /* outline: 2px dotted red; */
+   width: 50%;
+   text-align: center;
+}
+
+.footer-logo {
+   margin-top: 3rem;
+   padding-bottom: 2rem;
+}
+
+footer ul {
+   padding-left: 0;
+}
+footer li {
+   list-style: none;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+footer a {
+   color: var(--Grayish-blue);
+   text-decoration: none;
+   
+}
+
+footer p {
+   font-size: 1.2rem;
+   color: var(--White);
+   margin-bottom: 2rem;
+}
+
+.footer-connect{
+   margin-bottom: 3rem;
+
+}
