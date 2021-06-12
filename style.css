@@ -57,7 +57,7 @@ html,
 body {
    height: 100%;
    width: 100vw;
-   /* width: 99.9999vw; */
+   /* width: 80vw; */
 
    margin: 0;
    padding: 0;
@@ -97,11 +97,12 @@ header {
    background-color: white;
    width: 85%;
    height: 33rem;
+   overflow: hidden;
+
 
    margin-left: auto;
    margin-right: auto;
 
-   padding-top: 1rem;
    padding-left: 1.5rem;
    padding-right: 1.5rem;
 
@@ -109,6 +110,9 @@ header {
    box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
 
    font-family: "Overpass", sans-serif;
+
+   transition: height 0.2s ease-in;
+   /* transition: opacity 0.1s ease-in; */
 }
 
 ul.nav-container {
@@ -128,7 +132,7 @@ ul.nav-container {
    margin-top: 2rem;
 }
 
-.nav-link-container > ul {
+.nav-link-container  ul {
    overflow: hidden;
    height: 0;
 }
@@ -148,8 +152,11 @@ ul.nav-container {
    font-weight: 700;
 }
 
-.company > ul {
-   height: 160px;
+/* .company > ul { */
+.accordion {
+   height: 160px !important;
+
+   transition: height .2s ease;
    list-style: none;
    display: flex;
    flex-direction: column;
@@ -178,7 +185,6 @@ ul.nav-container {
 /* ? ************** nav-right ************** */
 
 .nav-right {
-   /* outline: 2px dotted black; */
    height: 18%;
    list-style: none;
    display: flex;
@@ -219,12 +225,15 @@ ul.nav-container {
 /* ? *************** botton *************** */
 
 .--header-botton {
-   display: none;
+   overflow: hidden;
    margin-top: 4rem;
    padding: 1.6rem;
    color: var(--White);
    font-family: "Overpass", sans-serif;
    text-align: center;
+
+   transition: height .2s ease-in;
+   
 }
 
 .header-texto p {
