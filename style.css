@@ -39,8 +39,6 @@
    --Very-dark-gray-blue: hsl(237, 17%, 21%);
    --Very-dark-desaturated-blue: hsl(237, 23%, 32%);
 
-   /* font-family: 'Overpass', sans-serif;  */
-   /* font-family: 'Ubuntu', sans-serif;  */
 }
 
 *,
@@ -57,7 +55,6 @@ html,
 body {
    height: 100%;
    width: 100vw;
-   /* width: 80vw; */
 
    margin: 0;
    padding: 0;
@@ -111,7 +108,6 @@ header {
    font-family: "Overpass", sans-serif;
 
    transition: height 0.2s ease-in;
-   /* transition: opacity 0.1s ease-in; */
 }
 
 hr{
@@ -136,7 +132,6 @@ ul.nav-container {
    margin-top: 2rem;
 }
 
-/* .nav-link-container  ul { */
 
 .nav-arrow {
    height: 2rem;
@@ -171,8 +166,6 @@ ul.nav-container {
    padding: 0;
    background-color: rgba(0, 0, 0, 0.1);
    margin-top: 1rem;
-   /* padding-top: 0.5rem; */
-   /* padding-bottom: 0.5rem; */
    border-radius: 0.5rem;
 }
 .nav-link {
