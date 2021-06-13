@@ -11,13 +11,15 @@ const ulList = document.querySelectorAll(
    ".nav-link-container  ul"
 );
 
-
 // ? when tha page load
 window.addEventListener("DOMContentLoaded", () => {
-   iconClose.style.display = "none";
-   navBar.style.height = "0";
-   headerBottom.style.height = "auto";
-
+   if (window.innerWidth < 768) {
+      iconClose.style.display = "none";
+      navBar.style.height = "0";
+      headerBottom.style.height = "auto";
+   } else {
+      iconMenu.style.display = "none";
+   }
 });
 
 // ? when chiking in the icon
@@ -56,6 +58,7 @@ const acordeon = (e) => {
    }
 };
 
+// ? when clicking inside menu
 navLeft.addEventListener("click", (e) => {
    e.stopPropagation();
 
@@ -65,4 +68,14 @@ navLeft.addEventListener("click", (e) => {
       e.target.parentElement.classList.contains("nav-arrow")
    )
       acordeon(e.target.parentElement);
+});
+
+// *****************************************
+// ? *************** desktop ***************
+// *****************************************
+
+window.addEventListener("resize", (e) => {
+   if (e.target.innerWidth > 768) {
+      console.log("hola mundo");
+   }
 });
