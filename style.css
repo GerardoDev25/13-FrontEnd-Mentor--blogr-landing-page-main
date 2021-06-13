@@ -445,10 +445,19 @@ footer p {
       width: auto;
    }
 
+   /* ***************************************** */
+   /* ? *************** header *************** */
+   /* ***************************************** */
+
    header {
       display: grid;
       grid-template-rows: 4fr 6fr;
       grid-template-columns: 3fr 10fr;
+      background: linear-gradient(
+         90deg,
+         var(--Very-light-red) 0%,
+         var(--Light-red) 100%
+      );
    }
 
    .--header-top,
@@ -464,12 +473,12 @@ footer p {
       margin-left: auto;
    }
 
-   .header-log{
+   .header-log {
       max-height: 2rem;
    }
 
    .NavBar {
-      overflow: auto;
+      overflow-x: hidden;
       width: 100%;
       height: auto;
       background-color: transparent;
@@ -491,6 +500,11 @@ footer p {
 
    .nav-arrow {
       cursor: pointer;
+      justify-content: flex-start;
+   }
+
+   .nav-arrow p:hover {
+      border-bottom: 1px solid white;
    }
 
    .nav-link-container {
@@ -498,8 +512,22 @@ footer p {
       height: auto;
    }
 
-   .nav-link-container ul{
-   margin-top: 0;
+   .nav-link-container ul {
+      margin-top: 0;
+      background-color: white;
+      width: 9rem;
+      align-items: flex-start;
+      padding-left: 1rem;
+      border-radius: 0.2rem;
+   }
+
+   .nav-link-container a {
+      color: var(--Very-dark-grayish-blue);
+      opacity: 0.9;
+   }
+   .nav-link-container a:hover {
+      color: var(--Very-dark-black-blue);
+      opacity: 1;
    }
 
    .nav-link-container p {
@@ -516,21 +544,31 @@ footer p {
       height: auto;
       width: 40%;
       max-width: 20rem;
-      /* outline: 2px dotted black; */
       flex-direction: row;
       flex-wrap: nowrap;
    }
 
    .nav-btn {
-   cursor: pointer;
+      cursor: pointer;
    }
 
    .signUp {
       background: white;
    }
+   .signUp:hover {
+      background: var(--Very-light-red);
+      color: white;
+   }
+
+   .login a {
+      color: white;
+   }
 
    .signUp a {
       color: var(--Light-red);
+   }
+   .signUp a:hover {
+      color: inherit;
    }
 
    .--header-botton {
@@ -541,19 +579,116 @@ footer p {
       margin: 0;
    }
 
-   .header-btn{
+   .header-btn {
       max-width: 20rem;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: auto;
    }
 
-   .header-texto h1{
+   .header-texto h1 {
       margin-top: 1rem;
-   font-size: 4rem;
+      line-height: 4rem;
+      font-size: 4rem;
    }
 
    .btn {
       cursor: pointer;
+   }
+   .start:hover {
+      background: var(--Very-light-red);
+      color: white;
+      transition: background, color 0.1s ease-in;
+   }
+   .learn:hover {
+      background: white;
+      color: var(--Light-red);
+      transition: background, color 0.1s ease-in;
+   }
+
+   /* ***************************************** */
+   /* ? *************** main *************** */
+   /* ***************************************** */
+
+   section p {
+      font-weight: initial;
+   }
+
+   .box {
+      padding-left: 4rem;
+      padding-right: 4rem;
+   }
+
+   .box-1 {
+      background-image: url("./images/illustration-editor-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-x: 110%;
+   }
+
+   .box-1 div {
+      display: flex;
+   }
+
+   .box-1 img {
+      display: none;
+   }
+   .box-1 .box-text {
+      width: 50%;
+      order: -1;
+      flex-direction: column;
+      text-align: left;
+   }
+
+   .box-2 {
+      display: flex;
+      height: 20rem;
+      align-items: center;
+   }
+
+   .box-2 .img2 {
+      position: static;
+      padding-top: 2rem;
+      width: 110%;
+   }
+
+   .box-section-3 {
+      padding-top: 0;
+      text-align: left;
+      padding-left: 3rem;
+      margin: 0;
+   }
+
+   .box-3 {
+      margin-top: 7rem;
+      display: flex;
+      align-items: center;
+   }
+
+   .img3 {
+      width: 140%;
+   }
+
+   .box-3 .box-text {
+      text-align: left;
+   }
+
+   footer {
+      flex-direction: row;
+      height: 20rem;
+      padding-top: 3rem;
+      align-items: flex-start;
+   }
+
+   .footer-logo {
+      margin-top: 1rem;
+   }
+
+   .footer-div {
+      text-align: left;
+   }
+
+   .footer-div a:hover {
+      text-decoration: underline;
    }
 }
