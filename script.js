@@ -7,9 +7,10 @@ const headerBottom = document.getElementById("headerBottom");
 
 const navLeft = document.querySelector(".nav-left");
 
-const product = document.querySelector(".product");
-const company = document.querySelector(".company");
-const connect = document.querySelector(".connect");
+const ulList = document.querySelectorAll(
+   ".nav-link-container  ul"
+);
+
 
 // ? when tha page load
 window.addEventListener("DOMContentLoaded", () => {
@@ -17,7 +18,6 @@ window.addEventListener("DOMContentLoaded", () => {
    navBar.style.height = "0";
    headerBottom.style.height = "auto";
 
-   // console.log(navLeft);
 });
 
 // ? when chiking in the icon
@@ -40,10 +40,20 @@ iconMenu.addEventListener("click", (e) => {
 });
 
 const acordeon = (e) => {
-   const li = e.parentElement
-   const ul = li.querySelector('ul')
-   console.log(ul);
-   ul.classList.add('accordion')
+   const li = e.parentElement;
+   const ul = li.querySelector("ul");
+
+   if (ul.classList.contains("accordion")) {
+      ul.classList.replace("accordion", "nab-hidden");
+      console.log("hola");
+   } else {
+      ulList.forEach((e) =>
+         e.classList.contains("accordion")
+            ? e.classList.replace("accordion", "nab-hidden")
+            : ""
+      );
+      ul.classList.replace("nab-hidden", "accordion");
+   }
 };
 
 navLeft.addEventListener("click", (e) => {

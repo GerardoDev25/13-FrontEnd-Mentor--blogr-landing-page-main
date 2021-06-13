@@ -99,7 +99,6 @@ header {
    height: 33rem;
    overflow: hidden;
 
-
    margin-left: auto;
    margin-right: auto;
 
@@ -113,6 +112,11 @@ header {
 
    transition: height 0.2s ease-in;
    /* transition: opacity 0.1s ease-in; */
+}
+
+hr{
+   margin-top: 1.6rem;
+   margin-bottom: 0;
 }
 
 ul.nav-container {
@@ -132,10 +136,7 @@ ul.nav-container {
    margin-top: 2rem;
 }
 
-.nav-link-container  ul {
-   overflow: hidden;
-   height: 0;
-}
+/* .nav-link-container  ul { */
 
 .nav-arrow {
    height: 2rem;
@@ -151,12 +152,17 @@ ul.nav-container {
    color: var(--Very-dark-grayish-blue);
    font-weight: 700;
 }
-
-/* .company > ul { */
+.nab-hidden {
+   height: 0 !important;
+   transition: height 0.2s ease;
+}
 .accordion {
-   height: 160px !important;
+   height: 160px;
+   transition: height 0.2s ease;
+}
+.nav-link-container > ul {
+   overflow: hidden;
 
-   transition: height .2s ease;
    list-style: none;
    display: flex;
    flex-direction: column;
@@ -165,8 +171,8 @@ ul.nav-container {
    padding: 0;
    background-color: rgba(0, 0, 0, 0.1);
    margin-top: 1rem;
-   padding-top: 0.5rem;
-   padding-bottom: 0.5rem;
+   /* padding-top: 0.5rem; */
+   /* padding-bottom: 0.5rem; */
    border-radius: 0.5rem;
 }
 .nav-link {
@@ -232,8 +238,7 @@ ul.nav-container {
    font-family: "Overpass", sans-serif;
    text-align: center;
 
-   transition: height .2s ease-in;
-   
+   transition: height 0.2s ease-in;
 }
 
 .header-texto p {
